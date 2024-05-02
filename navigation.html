@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indoor Navigation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    label {
+      font-weight: bold;
+      color: #555;
+      display: block;
+      margin-bottom: 8px;
+    }
+    
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    
+    input[type="button"] {
+      width: 100%;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    
+    input[type="button"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Indoor Navigation</h1>
+  </div>
+  <div class="container">
+    <h2>Enter Start and End Points</h2>
+    <label for="startPoint">Start Point:</label>
+    <select id="startPoint">
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+     
+    </select>
+    
+    <label for="endPoint">End Point:</label>
+    <select id="endPoint">
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+      <option value="A">A</option>
+    
+    </select>
+    
+    <input type="button" value="Navigate" onclick="redirectToPage()">
+  </div>
+  
+  <script>
+    function redirectToPage() {
+      var startPoint = document.getElementById("startPoint").value;
+      var endPoint = document.getElementById("endPoint").value;
+      
+      switch (startPoint + endPoint) {
+        case "AB":
+          window.location.href = "page1.html";
+          break;
+        case "AC":
+          window.location.href = "page2.html";
+          break;
+        case "AD":
+          window.location.href = "page3.html";
+          break;
+        case "BC":
+          window.location.href = "page4.html";
+          break;
+        case "BD":
+          window.location.href = "page5.html";
+          break;
+        case "CD":
+          window.location.href = "page6.html";
+          break;
+        default:
+          alert("Invalid start point or end point!");
+      }
+    }
+  </script>
+</body>
+</html>
