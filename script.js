@@ -21,6 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "https://www.example.com/page3";
         break;
       default:
-        alert("Invalid start point or end point!");
+        alert("Invalid start point or end point! Please correct");
     }
   }
